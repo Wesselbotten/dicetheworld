@@ -2,13 +2,14 @@ import { createThirdwebClient, getContract } from "thirdweb";
 import { polygon } from "thirdweb/chains";
 
 const clientId = process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "fallback-client-id";
-const contractAddress = process.env.NEXT_PUBLIC_NFT_CONTRACT_ADDRESS || "0x14ba701863A9734b17fB074bC27104D57B644f8E";
+// ZET HIER HET NIEUWE MARKETPLACE CONTRACTADRES NEER:
+const contractAddress = process.env.NEXT_PUBLIC_MARKETPLACE_CONTRACT_ADDRESS || "0xJOUW_NIEUWE_MARKETPLACE_CONTRACT_ADRES";
 
 export const client = createThirdwebClient({
   clientId: clientId,
 });
 
-export const contract = getContract({
+export const marketplaceContract = getContract({
   client,
   chain: polygon,
   address: contractAddress,
